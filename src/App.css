@@ -1,38 +1,29 @@
-.App {
-  text-align: center;
-}
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes rotateHue {
   from {
-    transform: rotate(0deg);
+    --hue-offset: 0;
   }
   to {
-    transform: rotate(360deg);
+    --hue-offset: 360;
   }
+}
+
+#gradientContainer {
+  width: 100vw;
+  height: 100vh;
+  --hue-offset: 0;
+  animation: rotateHue 10s linear infinite;
+
+  background-color: hsla(25, 100%, 89%, 1);
+  background-image:
+    radial-gradient(at 40% 20%, hsla(calc(25 + var(--hue-offset)), 100%, 86%, 1) 0px, transparent 50%),
+    radial-gradient(at 73% 28%, hsla(calc(28 + var(--hue-offset)), 100%, 86%, 1) 0px, transparent 50%),
+    radial-gradient(at 34% 69%, hsla(calc(189 + var(--hue-offset)), 100%, 86%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 52%, hsla(calc(355 + var(--hue-offset)), 100%, 86%, 1) 0px, transparent 50%),
+    radial-gradient(at 61% 74%, hsla(calc(340 + var(--hue-offset)), 100%, 86%, 1) 0px, transparent 50%),
+    radial-gradient(at 22% 36%, hsla(calc(22 + var(--hue-offset)), 100%, 86%, 1) 0px, transparent 50%),
+    radial-gradient(at 54% 38%, hsla(calc(240 + var(--hue-offset)), 100%, 86%, 1) 0px, transparent 50%);
 }
