@@ -19,8 +19,8 @@ function Nav({ isMenuOpen, setIsMenuOpen, pColor }) {
 
   return (
     <div>
-      <div className="nav-div fixed z-0 h-10 top-0 left-0 mx-5 my-5" style={{
-      borderBottom: `2px solid ${pColor}`
+      <div className="nav-div fixed z-0 h-10 top-0 left-0 right-0 mx-6 my-8" style={{
+      borderBottom: `1px solid ${pColor}`
       }}>
         <SiteLogo 
           onClick={() => {

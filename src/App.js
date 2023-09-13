@@ -8,7 +8,7 @@ import React, { useEffect, useState } from 'react'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const pColor = '#ffffff'
+  const pColor = '#1c1975'
 
   return (
     <div className="App">
