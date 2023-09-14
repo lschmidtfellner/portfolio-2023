@@ -8,14 +8,14 @@ import React, { useEffect, useState } from 'react'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const pColor = '#253799'
+  const pColor = '#101457'
 
   return (
-    <div className="App">
+    <div className="App" style={{ position: 'relative', zIndex: 1 }}>
       <Bg />
       <Nav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} pColor={pColor} />
       <Routes>
-        <Route path="/" element={<Landing />}></Route>
+        <Route path="/" element={<Landing pColor={pColor} />}></Route>
       </Routes>
     </div>
   )
