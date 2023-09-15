@@ -64,9 +64,9 @@ radial-gradient(at 20% 90%, hsla(${hues[8]},100%,80%,1) 0px, transparent 50%)`
         position: 'fixed',
         backgroundImage: `url(${noiseTexture})`,
         backgroundBlendMode: 'multiply', 
-        opacity: '40%',
+        opacity: '50%',
         backgroundRepeat: 'repeat',
-        backgroundSize: '50px 50px'
+        backgroundSize: '60px 60px'
       }}
     />
     </div>

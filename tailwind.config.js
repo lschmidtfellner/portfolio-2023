@@ -3,6 +3,15 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
+      keyframes: {
+        slowspin: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+      },
+      animation: {
+        slowspin: 'slowspin 20s linear infinite',
+      },
       fontFamily: {
         'aktiv': ['aktiv-grotesk-extended', 'sans-serif'],
         'higuen': ['higuen', 'serif']
