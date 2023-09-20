@@ -20,7 +20,7 @@ function Nav({ isMenuOpen, setIsMenuOpen, pColor }) {
 
   return (
     <div>
-      <div className="flex nav-div fixed z-0 h-10 top-0 left-0 right-0 mx-6 pt-8 pb-10 justify-between" style={{
+      <div className="flex nav-div z-0 h-10 top-0 left-0 right-0 mx-6 pt-8 pb-10 justify-between" style={{
       borderBottom: `1px solid ${pColor}`
       }}>
         <SiteLogo 
