@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ReactComponent as SiteLogo } from '../assets/sitelogo.svg';
 import { ReactComponent as Hamburger } from '../assets/siteburger.svg'
+import { ReactComponent as CloseX } from '../assets/sitex.svg'
 
 function Nav({ isMenuOpen, setIsMenuOpen, pColor }) {
   const navigate = useNavigate();
@@ -33,7 +34,7 @@ function Nav({ isMenuOpen, setIsMenuOpen, pColor }) {
           className="h-4 cursor-pointer"
           fill={pColor} 
         />
-      <Hamburger className='h-4'></Hamburger>
+      {isMenuOpen ? <CloseX className='h-5' onClick={() => {menuToggle()}}/> : <Hamburger className='h-4' onClick={() => {menuToggle()}}/>}
       </div>
     </div>
   );

@@ -2,30 +2,30 @@ import React from 'react'
 
 function SelectedWork({pColor}) {
   return (
-    <div className='mt-32'>
+    <div className='mt-40'>
         <h2 className='font-aktiv font-bold text-lg'>Selected Work</h2>
         <ul>
           <li style={{
       borderBottom: `1px solid ${pColor}`
-      }} className='font-higuen text-2xl pb-2 mt-16 border-b-1 '>RevRadar</li>
+      }} className='font-higuen text-3xl pb-2 mt-16 border-b-1 cursor-pointer '>RevRadar</li>
           <li style={{
       borderBottom: `1px solid ${pColor}`
-      }} className='font-higuen text-2xl pb-2 mt-6 border-b-1 '>Rippl</li>
+      }} className='font-higuen text-3xl pb-2 mt-6 border-b-1 cursor-pointer '>Rippl</li>
           <li style={{
       borderBottom: `1px solid ${pColor}`
-      }} className='font-higuen text-2xl pb-2 mt-6 border-b-1 '>Newor Media</li>
+      }} className='font-higuen text-3xl pb-2 mt-6 border-b-1 cursor-pointer '>Newor Media</li>
           <li style={{
       borderBottom: `1px solid ${pColor}`
-      }} className='font-higuen text-2xl pb-2 mt-6 border-b-1 '>Metal Coat</li>
+      }} className='font-higuen text-3xl pb-2 mt-6 border-b-1 cursor-pointer '>Metal Coat</li>
           <li style={{
       borderBottom: `1px solid ${pColor}`
-      }} className='font-higuen text-2xl pb-2 mt-6 border-b-1 '>Crisol</li>
+      }} className='font-higuen text-3xl pb-2 mt-6 border-b-1 cursor-pointer '>Crisol</li>
           <li style={{
       borderBottom: `1px solid ${pColor}`
-      }} className='font-higuen text-2xl pb-2 mt-6 border-b-1 '>Vertrag</li>
+      }} className='font-higuen text-3xl pb-2 mt-6 border-b-1 cursor-pointer '>Vertrag</li>
           <li style={{
       borderBottom: `1px solid ${pColor}`
-      }} className='font-higuen text-2xl pb-2 mt-6 border-b-1 '>Coming of Age</li>
+      }} className='font-higuen text-3xl pb-2 mt-6 border-b-1 '>Coming of Age</li>
         </ul>
       </div>
   )
