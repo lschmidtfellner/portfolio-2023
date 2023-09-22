@@ -9,7 +9,7 @@ import Contact from '../components/Contact'
 function Landing({ pColor }) {
   return (
     <div style={{ color: pColor }} className='mx-6 pt-16'>
-      <div className="text-5xl text-center">
+      <div className="text-6xl text-center">
         <h1 className="font-higuen">Luke</h1>
         <h1 className="font-higuen">Schmidt</h1>
         <div className="flex justify-center">
@@ -22,7 +22,7 @@ function Landing({ pColor }) {
         <h2>& UI Engineer</h2>
       </div>
       <div className='flex mt-12 justify-between'>
-        <p  className='text-[10pt] font-aktiv w-48 '>I’m a Brooklyn-based designer, software engineer, artist, and musician who recently graduated from General Assembly’s fullstack software engineering fellowship.</p>
+        <p  className='text-xs font-aktiv w-40 '>I’m a Brooklyn-based designer, software engineer, artist, and musician who recently graduated from General Assembly’s fullstack software engineering fellowship.</p>
         <div className='flex flex-col mr-6 mt-6 items-center justify-center'>
           <SiteScroll style={{color: pColor}} className='w-20 animate-slowspin site-scroll'/>
           <SiteDownArrow style={{color: pColor}}className='w-8 mt-4'/>

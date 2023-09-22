@@ -3,7 +3,7 @@ import {ReactComponent as SiteHyphenLg} from '../assets/sitehyphenlg.svg'
 
 function Contact({pColor}) {
   return (
-    <div className='mt-40'>
+    <div className='mt-40 mb-20'>
       <h2 className='font-aktiv font-bold text-lg'>Get in Touch</h2>
       <div className='this-one flex flex-col mt-16 items-center'>
         <div className='flex'>
