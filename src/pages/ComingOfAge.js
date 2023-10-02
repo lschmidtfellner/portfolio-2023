@@ -2,49 +2,41 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import {ReactComponent as SideArrow} from '../assets/sitesidearrow.svg'
 
-import crisol1 from '../assets/crisol/8.jpeg'
-import crisol2 from '../assets/crisol/Event_Wristband_Mockup_2.jpeg'
-import crisol3 from '../assets/crisol/Flag+Mockup.jpeg'
-import crisol4 from '../assets/crisol/iPhone+X+2018+Mockup.jpeg'
+import coa1 from '../assets/comingofage/bfi+spread+1+site.jpeg'
+import coa2 from '../assets/comingofage/bfi+spread+2+site.jpeg'
+import coa3 from '../assets/comingofage/Ticket+Set+MoVV.jpeg'
 
 
-function Crisol({ pColor, handleNavigation }) {
+function ComingOfAge({ pColor, handleNavigation }) {
   const navigate = useNavigate()
   return (
     <div style={{ color: pColor }} className="mx-6 mt-20 w-auto ">
-      <h2 className="text-5xl font-higuen">Crisol</h2>
+      <h2 className="text-5xl font-higuen">Coming of Age</h2>
       <h3 className="text-lg font-aktiv font-bold mt-12">
-        Design, Identity
+        Design
       </h3>
       <div className="flex justify-center mt-12">
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
-          src={crisol1}
+          src={coa1}
         />
       </div>
       <p className="font-aktiv mt-12 text-xs w-72">
-      This identity was built out as a solution to a mock design prompt for a multi-purpose venue based in Santago, Chile. The name Crisol means "crucible", or the container in which components are smelted together. I wanted to invoke imagery from metallurgy or metalsmithing to communicate that the venue would be a place of high-energy experimentation.
+      The assignment entailed the creation of a brochure for the British Film Institute’s John Hughes film festival. With the intention to reflect the lively and youthful essence of Hughes’ films, a warm color palette was chosen. This was complemented by the use of 3D-extruded lines, contributing a sense of motion and a light-hearted feel to the design. This approach sought to gently echo the engaging and dynamic nature of Hughes’ filmography, aiming to offer a subtle yet spirited visual experience for the festival attendees.
       </p>
       <div className="flex justify-center mt-12">
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
-          src={crisol3}
+          src={coa2}
         />
       </div>
       <div className="flex justify-center mt-12">
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
-          src={crisol4}
-        />
-      </div>
-      <div className="flex justify-center mt-12">
-        <img
-          style={{ borderColor: pColor }}
-          className="border-[1px] w-fit h-auto"
-          src={crisol2}
+          src={coa3}
         />
       </div>
       <div>
@@ -53,14 +45,10 @@ function Crisol({ pColor, handleNavigation }) {
             <SideArrow className='h-10 mt-4 mr-2'/>
           <h2>Home&emsp;</h2>
           </div>
-          <div onClick={() => handleNavigation('/vertrag')} className='flex'>
-          <h2>&emsp;Next</h2>
-          <SideArrow className='h-10 mt-4 ml-2 rotate-180'/>
-          </div>
         </div>
       </div>
     </div>
   )
 }
 
-export default Crisol
+export default ComingOfAge

@@ -5,7 +5,7 @@ import rippl2 from '../assets/rippl/rippl2.png'
 import rippl3 from '../assets/rippl/rippl3.png'
 import {ReactComponent as SideArrow} from '../assets/sitesidearrow.svg'
 
-function Rippl({ pColor }) {
+function Rippl({ pColor, handleNavigation }) {
   const navigate = useNavigate()
   return (
     <div style={{ color: pColor }} className="mx-6 mt-20 w-auto ">
@@ -65,12 +65,12 @@ function Rippl({ pColor }) {
         </a>
       </h2>
       <div>
-        <div className='peech flex flex-col font-higuen text-6xl mt-40 mb-40 justify-center items-center leading-snug'>
-          <div onClick={() => navigate('/')} className='flex'>
+        <div className='flex flex-col font-higuen text-6xl mt-40 mb-40 justify-center items-center leading-snug'>
+          <div onClick={() => handleNavigation('/')} className='flex'>
             <SideArrow className='h-10 mt-4 mr-2'/>
           <h2>Home&emsp;</h2>
           </div>
-          <div onClick={() => navigate('/newor')} className='flex'>
+          <div onClick={() => handleNavigation('/newor')} className='flex'>
           <h2>&emsp;Next</h2>
           <SideArrow className='h-10 mt-4 ml-2 rotate-180'/>
           </div>

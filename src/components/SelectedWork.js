@@ -1,36 +1,134 @@
-import React from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { ReactComponent as SiteHyphen } from '../assets/sitehyphenlg.svg'
+import { gsap } from 'gsap'
+import userEvent from '@testing-library/user-event'
 
-function SelectedWork({pColor}) {
-  const navigate = useNavigate()
+function SelectedWork({ pColor, handleNavigation }) {
+    const workRef = useRef(null);
+    const [isInView, setIsInView] = useState(false);
+    const hasAnimated = useRef(false); // Ref to track if animation has been played
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          setIsInView(entry.isIntersecting);
+        },
+        {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.5,
+        }
+      );
+  
+      if (workRef.current) {
+        observer.observe(workRef.current);
+      }
+  
+      return () => {
+        if (workRef.current) {
+          observer.unobserve(workRef.current);
+        }
+      };
+    }, []);
+  
+    useEffect(() => {
+      if (isInView && !hasAnimated.current) { // Check if has not animated
+        const elements = workRef.current.children;
+        gsap.set(elements, { x: '100%', autoAlpha: 0 });
+  
+        gsap.to(elements, {
+          x: '0%',
+          autoAlpha: 1,
+          stagger: 0.3,
+          duration: 0.6,
+          ease: 'power2.out',
+          overwrite: 'auto',
+        });
+  
+        hasAnimated.current = true; // Set to true after animating
+      }
+    }, [isInView]);
 
   return (
-    <div className='mt-40'>
-        <h2 className='font-aktiv font-bold text-lg'>Selected Work</h2>
-        <ul>
-          <li onClick={() => navigate('/revradar')} style={{
-      borderBottom: `1px solid ${pColor}`
-      }} className='font-higuen text-3xl pb-2 mt-16 border-b-1 cursor-pointer '>RevRadar</li>
-          <li onClick={() => navigate('/rippl')} style={{
-      borderBottom: `1px solid ${pColor}`
-      }} className='font-higuen text-3xl pb-2 mt-6 border-b-1 cursor-pointer '>Rippl</li>
-          <li onClick={() => navigate('/newor')} style={{
-      borderBottom: `1px solid ${pColor}`
-      }} className='font-higuen text-3xl pb-2 mt-6 border-b-1 cursor-pointer '>Newor Media</li>
-          <li onClick={() => navigate('/metalcoat')} style={{
-      borderBottom: `1px solid ${pColor}`
-      }} className='font-higuen text-3xl pb-2 mt-6 border-b-1 cursor-pointer '>Metal Coat</li>
-          <li onClick={() => navigate('/crisol')} style={{
-      borderBottom: `1px solid ${pColor}`
-      }} className='font-higuen text-3xl pb-2 mt-6 border-b-1 cursor-pointer '>Crisol</li>
-          <li onClick={() => navigate('/vertrag')} style={{
-      borderBottom: `1px solid ${pColor}`
-      }} className='font-higuen text-3xl pb-2 mt-6 border-b-1 cursor-pointer '>Vertrag</li>
-          <li onClick={() => navigate('/comingofage')} style={{
-      borderBottom: `1px solid ${pColor}`
-      }} className='font-higuen text-3xl pb-2 mt-6 border-b-1 '>Coming of Age</li>
-        </ul>
+    <div className="mt-40">
+      <div className="flex">
+        <h2 className="font-aktiv font-bold text-lg">Selected Work</h2>
+        <SiteHyphen style={{ borderColor: pColor }} className="ml-3 mt-3 h-2" />
       </div>
+      <ul ref={workRef}>
+        <li
+          onClick={() => handleNavigation('/revradar')}
+          style={{
+            borderBottom: `1px solid ${pColor}`,
+            opacity: 0
+          }}
+          className="font-higuen text-3xl pb-2 mt-16 border-b-1 cursor-pointer "
+        >
+          RevRadar
+        </li>
+        <li
+          onClick={() => handleNavigation('/rippl')}
+          style={{
+            borderBottom: `1px solid ${pColor}`,
+            opacity: 0
+          }}
+          className="font-higuen text-3xl pb-2 mt-6 border-b-1 cursor-pointer "
+        >
+          Rippl
+        </li>
+        <li
+          onClick={() => handleNavigation('/newor')}
+          style={{
+            borderBottom: `1px solid ${pColor}`,
+            opacity: 0
+          }}
+          className="font-higuen text-3xl pb-2 mt-6 border-b-1 cursor-pointer "
+        >
+          Newor Media
+        </li>
+        <li
+          onClick={() => handleNavigation('/metalcoat')}
+          style={{
+            borderBottom: `1px solid ${pColor}`,
+            opacity: 0
+          }}
+          className="font-higuen text-3xl pb-2 mt-6 border-b-1 cursor-pointer "
+        >
+          Metal Coat
+        </li>
+        <li
+          onClick={() => handleNavigation('/crisol')}
+          style={{
+            borderBottom: `1px solid ${pColor}`,
+            opacity: 0
+          }}
+          className="font-higuen text-3xl pb-2 mt-6 border-b-1 cursor-pointer "
+        >
+          Crisol
+        </li>
+        <li
+          onClick={() => handleNavigation('/vertrag')}
+          style={{
+            borderBottom: `1px solid ${pColor}`,
+            opacity: 0
+          }}
+          className="font-higuen text-3xl pb-2 mt-6 border-b-1 cursor-pointer "
+        >
+          Vertrag
+        </li>
+        <li
+          onClick={() => handleNavigation('/comingofage')}
+          style={{
+            borderBottom: `1px solid ${pColor}`,
+            opacity: 0
+          }}
+          className="font-higuen text-3xl pb-2 mt-6 border-b-1 "
+        >
+          Coming of Age
+        </li>
+      </ul>
+    </div>
   )
 }
 

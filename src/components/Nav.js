@@ -4,7 +4,7 @@ import { ReactComponent as SiteLogo } from '../assets/sitelogo.svg';
 import { ReactComponent as Hamburger } from '../assets/siteburger.svg'
 import { ReactComponent as CloseX } from '../assets/sitex.svg'
 
-function Nav({ isMenuOpen, setIsMenuOpen, pColor }) {
+function Nav({ isMenuOpen, setIsMenuOpen, pColor, handleNavigation }) {
   const navigate = useNavigate();
 
   function menuToggle() {
@@ -26,7 +26,7 @@ function Nav({ isMenuOpen, setIsMenuOpen, pColor }) {
       }}>
         <SiteLogo 
           onClick={() => {
-            navigate('/');
+            handleNavigation('/');
             if (isMenuOpen === true) {
               menuToggle();
             }
