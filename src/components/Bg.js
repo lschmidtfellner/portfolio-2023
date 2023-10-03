@@ -47,7 +47,7 @@ function Bg({ modeToggle }) {
         style={{
           transition: 'ease-in-out all 0.4s',
           position: 'fixed',
-          backgroundColor: `hsla(${hues[0]},40%,89%,1)`,
+          backgroundColor: `hsla(${hues[0]+220},40%,20%,1)`,
           backgroundImage:
              `radial-gradient(at 41% 50%, hsla(${
                 hues[1] + 220
