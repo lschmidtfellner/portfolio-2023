@@ -51,7 +51,7 @@ function Contact({ modeToggle, pColor }) {
   }, [isInView])
 
   return (
-    <div className="mt-40 sm:mt-60 mb-20">
+    <div className="mt-40 sm:mt-60 mb-20 lg:mb-40">
       <div className="flex justify-between">
         <h2 className="font-aktiv font-bold text-lg">Get in Touch</h2>
         {modeToggle ? <SiteHyphenLg2 className="ml-3 mt-3 h-2 sm:h-3" /> : <SiteHyphenLg className="ml-3 mt-3 h-2 sm:h-3" />}

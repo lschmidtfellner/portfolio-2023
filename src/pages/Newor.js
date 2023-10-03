@@ -30,46 +30,46 @@ function Newor({ modeToggle, pColor, handleNavigation }) {
   }, [])
 
   return (
-    <div ref={childrenRef} style={{ color: pColor }} className="mx-6 mt-20 w-auto ">
-      <h2 className="text-5xl font-higuen">Newor Media</h2>
-      <h3 className="text-lg font-aktiv font-bold mt-12">
+    <div ref={childrenRef} style={{ color: pColor }} className="flex flex-col mx-6 mt-20 pt-16 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80">
+      <h2 className="text-5xl sm:text-8xl font-higuen">Newor Media</h2>
+      <h3 className="text-lg sm:text-2xl font-aktiv font-bold mt-12">
         Illustration, Design
       </h3>
-      <p className="font-aktiv mt-6 text-xs w-72">
+      <p className="font-aktiv mt-6 text-xs sm:text-sm lg:text-lg w-[80%]">
       I was contracted by Newor Media to create a series of illustrations for their blog. They found that the illustrations available from typical sources were too sterile, and the task was to create something simple and vibrant that would stand out by comparison.
       </p>
-      <div className="flex justify-center mt-12">
+      <div className="flex justify-center mt-20">
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
           src={newor10}
         />
       </div>
-      <div className="flex justify-center mt-12">
+      <div className="flex justify-center mt-20">
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
           src={newor9}
         />
       </div>
-      <p className="font-aktiv mt-12 text-xs w-72">
+      <p className="font-aktiv mt-20 text-xs sm:text-sm lg:text-lg w-[80%]">
         In order to introduce a unique to the series, I used a combination of sumi ink brush strokes and vector graphics, predominantly with the help of the Adobe Creative Suite. This ended up being more than 30 illustrations in total.
       </p>
-      <div className="flex justify-center mt-12">
+      <div className="flex justify-center mt-20">
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
           src={newor4}
         />
       </div>
-      <div className="flex justify-center mt-12">
+      <div className="flex justify-center mt-20">
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
           src={newor8}
         />
       </div>
-      <div className="flex justify-center mt-12">
+      <div className="flex justify-center mt-20">
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"

@@ -14,6 +14,7 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
   const headerRef = useRef(null)
   const workRef = useRef(null)
   const arrowRef = useRef(null)
+  const arrowRef2 = useRef(null)
 
   useEffect(() => {
     const elements = headerRef.current.children
@@ -77,45 +78,85 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
       duration: 1, // Animation duration is 1 second
       yoyo: true, // Makes the animation alternate back and forth
       repeat: -1, // Repeats the animation indefinitely
-      ease: 'power1.inOut', // Easing function for smooth animation
-    });
-  }, []);
+      ease: 'power1.inOut' // Easing function for smooth animation
+    })
+  }, [])
 
   return (
-    <div style={{ color: pColor }} className="mx-6 pt-16 sm:px-20">
+    <div
+      style={{ color: pColor }}
+      className="mx-6 pt-16 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80"
+    >
       <div>
-        <div ref={headerRef} className="text-6xl sm:text-[85pt] text-center">
-          <h1 style={{opacity: 0}} className="font-higuen">Luke</h1>
-          <h1 style={{opacity: 0}} className="font-higuen">Schmidt</h1>
-          <div style={{opacity: 0}} className="flex justify-center">
-            {modeToggle ? <SiteHyphenLg2
-              className="w-14 sm:w-32 mb-2 mr-4"
-            /> : <SiteHyphenLg
-            className="w-14 sm:w-32 mb-2 mr-4"
-          />}
+        <div
+          ref={headerRef}
+          className="text-6xl sm:text-[85pt] lg:text-[115pt] text-center"
+        >
+          <h1 style={{ opacity: 0 }} className="font-higuen">
+            Luke
+          </h1>
+          <h1 style={{ opacity: 0 }} className="font-higuen">
+            Schmidt
+          </h1>
+          <div style={{ opacity: 0 }} className="flex justify-center">
+            {modeToggle ? (
+              <SiteHyphenLg2 className="w-14 sm:w-32 lg:w-40 mb-2 mr-4" />
+            ) : (
+              <SiteHyphenLg className="w-14 sm:w-32 lg:w-40 mb-2 mr-4" />
+            )}
             <div ref={landingRef}>
               <h1 className=" font-higuen">Fellner</h1>
             </div>
           </div>
-          <div style={{opacity: 0}} className=" text-right font-bold font-aktiv w-full pt-8 z-4 text-lg sm:text-2xl">
-            <h2>Graphic Designer</h2>
-            <h2>& UI Engineer</h2>
+          <div
+            style={{ opacity: 0 }}
+            className="flex justify-around text-right lg:text-left font-aktiv w-full pt-8 lg:pt-4 z-4 text-lg sm:text-2xl"
+          >
+            <div>
+              <div className="flex flex-col font-bold">
+                <h2>Graphic Designer</h2>
+                <h2>& UI Engineer</h2>
+              </div>
+              <p className="hidden lg:block pt-8 text-sm text-left font-aktiv w-72 ">
+                I’m a Brooklyn-based designer, software engineer, artist, and
+                musician who recently graduated from General Assembly’s
+                fullstack software engineering fellowship.
+              </p>
+            </div>
+            <div className="hidden lg:flex flex-col mr-6 items-center justify-center">
+              {modeToggle ? (
+                <SiteScroll2 className="w-20 sm:w-24 animate-slowspin site-scroll" />
+              ) : (
+                <SiteScroll className="w-20 sm:w-24 animate-slowspin site-scroll" />
+              )}
+              <div ref={arrowRef2}>
+                {modeToggle ? (
+                  <SiteDownArrow2 className="animate-updown w-8 sm:w-10 mt-4" />
+                ) : (
+                  <SiteDownArrow className="animate-updown w-8 sm:w-10 mt-4" />
+                )}
+              </div>
+            </div>
           </div>
-          <div style={{opacity: 0}} className="flex mt-12 justify-between">
-            <p className="text-xs sm:text-sm text-left font-aktiv w-40 sm:w-72 ">
+          <div style={{ opacity: 0 }} className="flex mt-12 justify-between">
+            <p className="lg:hidden text-xs sm:text-sm text-left font-aktiv w-40 sm:w-72 ">
               I’m a Brooklyn-based designer, software engineer, artist, and
               musician who recently graduated from General Assembly’s fullstack
               software engineering fellowship.
             </p>
-            <div className="flex flex-col mr-6 items-center justify-center">
-              {modeToggle ? <SiteScroll2
-                
-                className="w-20 sm:w-24 animate-slowspin site-scroll"
-              /> : <SiteScroll
-              
-              className="w-20 sm:w-24 animate-slowspin site-scroll"
-            />}
-              {modeToggle ? <SiteDownArrow2 ref={arrowRef} className="w-8 sm:w-10 mt-4" /> : <SiteDownArrow ref={arrowRef} className="w-8 sm:w-10 mt-4" />}
+            <div className="flex lg:hidden flex-col mr-6 items-center justify-center">
+              {modeToggle ? (
+                <SiteScroll2 className="w-20 sm:w-24 animate-slowspin site-scroll" />
+              ) : (
+                <SiteScroll className="w-20 sm:w-24 animate-slowspin site-scroll" />
+              )}
+              <div ref={arrowRef}>
+              {modeToggle ? (
+                <SiteDownArrow2 className="animate-updown w-8 sm:w-10 mt-4" />
+              ) : (
+                <SiteDownArrow className="animate-updown w-8 sm:w-10 mt-4" />
+              )}
+              </div>
             </div>
           </div>
         </div>

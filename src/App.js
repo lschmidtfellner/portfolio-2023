@@ -10,6 +10,7 @@ import Crisol from './pages/Crisol'
 import Vertrag from './pages/Vertrag'
 import ComingOfAge from './pages/ComingOfAge'
 import MetalCoat from './pages/MetalCoat'
+import RevRadar from './pages/RevRadar';
 import BreakpointIndicator from './components/BreakpointIndicator';
 
 import { Route, Routes, useNavigate } from 'react-router-dom'
@@ -57,8 +58,10 @@ function App() {
         <Route path="/vertrag" element={<Vertrag modeToggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}></Route>
         <Route path="/comingofage" element={<ComingOfAge modeToggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}></Route>
         <Route path="/metalcoat" element={<MetalCoat modeToggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}></Route>
+        <Route path="/metalcoat" element={<MetalCoat modeToggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}></Route>
+        <Route path="/revradar" element={<RevRadar modeToggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}></Route>
       </Routes>
-      <BreakpointIndicator/>
+      {/* <BreakpointIndicator/> */}
     </div>
   )
 }

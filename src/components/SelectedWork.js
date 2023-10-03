@@ -52,7 +52,7 @@ function SelectedWork({ modeToggle, pColor, handleNavigation }) {
     }, [isInView]);
 
   return (
-    <div className="mt-40">
+    <div className="mt-40 lg:mt-64">
       <div className="flex justify-between">
         <h2 className="font-aktiv font-bold text-lg sm:text-2xl">Selected Work</h2>
         {modeToggle ? <SiteHyphen2 className="ml-3 mt-3 h-2 sm:h-3" /> : <SiteHyphen className="ml-3 mt-3 h-2 sm:h-3" />}

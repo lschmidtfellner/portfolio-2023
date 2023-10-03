@@ -26,38 +26,38 @@ function Rippl({ modeToggle, pColor, handleNavigation }) {
   }, [])
 
   return (
-    <div ref={childrenRef} style={{ color: pColor }} className="mx-6 mt-20 w-auto ">
-      <h2 style={{opacity: 0}} className="text-5xl font-higuen">Rippl</h2>
-      <h3 style={{opacity: 0}} className="text-lg font-aktiv font-bold mt-12">
+    <div ref={childrenRef} style={{ color: pColor }} className="flex flex-col mx-6 mt-20 pt-16 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80 ">
+      <h2 style={{opacity: 0}} className="text-5xl sm:text-8xl font-higuen">Rippl</h2>
+      <h3 style={{opacity: 0}} className="text-lg sm:text-2xl font-aktiv font-bold mt-12">
         Design, Web Development
       </h3>
-      <p style={{opacity: 0}} className="font-aktiv mt-6 text-xs w-72">
+      <p style={{opacity: 0}} className="font-aktiv mt-6 text-xs sm:text-sm lg:text-lg w-[80%]">
         Rippl is a fullstack MERN app I developed in an effort to utilize
         Spotify's proprietary 'popularity quotient' against itself. By limiting
         the maximum popularity and providing a track or two, I discovered that I
         could find lesser-known hits within a given genre.
       </p>
-      <div style={{opacity: 0}} className="flex justify-center mt-12">
+      <div style={{opacity: 0}} className="flex justify-center mt-20">
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
           src={rippl0}
         />
       </div>
-      <p style={{opacity: 0}} className="font-aktiv mt-12 text-xs w-72">
+      <p style={{opacity: 0}} className="font-aktiv mt-20 text-xs sm:text-sm lg:text-lg w-[80%]">
         For the visual identity, I wanted to play around with 3-dimensional
         assets that ideated on ripples or waves. I also wanted to keep it
         somewhat compatible with Spotify's visual identity, but with some extra
         whimsy and flair.
       </p>
-      <div style={{opacity: 0}} className="flex justify-center mt-12">
+      <div style={{opacity: 0}} className="flex justify-center mt-20">
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
           src={rippl2}
         />
       </div>
-      <div style={{opacity: 0}} className="flex justify-center mt-12">
+      <div style={{opacity: 0}} className="flex justify-center mt-20">
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
@@ -69,7 +69,7 @@ function Rippl({ modeToggle, pColor, handleNavigation }) {
           borderBottom: `1px solid ${pColor}`,
           opacity: 0
         }}
-        className="font-higuen text-3xl pb-2 mt-16 border-b-1 cursor-pointer "
+        className="font-higuen text-3xl pb-2 mt-20 border-b-1 cursor-pointer "
       >
         <a href="https://ripplrecs.netlify.app/">Visit the site</a>
       </h2>

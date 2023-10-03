@@ -6,7 +6,6 @@ function ToggleSwitch({modeToggle, setModeToggle, pColor}) {
   // Define a function to toggle the boolean value
   const handleToggle = () => {
     setModeToggle(prevState => !prevState);
-    console.log(modeToggle)
   };
 
   return (

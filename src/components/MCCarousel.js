@@ -20,7 +20,8 @@ export default function MCCarousel({ pColor }) {
     focusOnSelect: false,
   }
   return (
-    <Slider className='mc-carousel' {...settings}>
+    
+    <Slider className='mc-carousel w-full sm:w-[75%]' {...settings}>
       <div className="flex justify-center mt-12">
         <img
           style={{ borderColor: pColor }}
@@ -58,14 +59,6 @@ export default function MCCarousel({ pColor }) {
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
           src={mc5}
-          alt="there is alt text here!"
-        />
-      </div>
-      <div className="flex justify-center mt-12">
-        <img
-          style={{ borderColor: pColor }}
-          className="border-[1px] w-fit h-auto"
-          src={mc6}
           alt="there is alt text here!"
         />
       </div>
