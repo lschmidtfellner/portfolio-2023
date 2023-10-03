@@ -48,8 +48,8 @@ function Bg({ modeToggle }) {
           transition: 'ease-in-out all 0.4s',
           position: 'fixed',
           backgroundColor: `hsla(${hues[0]},40%,89%,1)`,
-          backgroundImage: modeToggle
-            ? `radial-gradient(at 41% 50%, hsla(${
+          backgroundImage:
+             `radial-gradient(at 41% 50%, hsla(${
                 hues[1] + 220
               },100%,40%,1) 0px, transparent 50%),
               radial-gradient(at 29% 33%, hsla(${
@@ -73,30 +73,42 @@ function Bg({ modeToggle }) {
               radial-gradient(at 20% 90%, hsla(${
                 hues[8] + 220
               },100%,80%,1) 0px, transparent 50%)`
-            : `radial-gradient(at 41% 50%, hsla(${
-                hues[1]
-              },100%,77%,1) 0px, transparent 50%),
-      radial-gradient(at 29% 33%, hsla(${
-        hues[2] + 220
-      },100%,80%,1) 0px, transparent 50%),
-      radial-gradient(at 32% 74%, hsla(${
-        hues[3] + 220
-      },100%,80%,1) 0px, transparent 50%),
-      radial-gradient(at 77% 40%, hsla(${
-        hues[4] + 220
-      },100%,80%,1) 0px, transparent 50%),
-      radial-gradient(at 65% 69%, hsla(${
-        hues[5] + 220
-      },100%,80%,1) 0px, transparent 50%),
-      radial-gradient(at 50% 25%, hsla(${
-        hues[6] + 220
-      },100%,80%,1) 0px, transparent 50%),
-      radial-gradient(at 90% 72%, hsla(${
-        hues[7] + 220
-      },100%,80%,1) 0px, transparent 50%),
-      radial-gradient(at 20% 90%, hsla(${
-        hues[8] + 220
-      },100%,80%,1) 0px, transparent 50%)`
+             
+        }}
+      />
+      <div
+        id="gradientContainer"
+        className="h-full w-full"
+        style={{
+          opacity: modeToggle ? 0 : 1,
+          transition: 'ease-in-out all 0.4s',
+          position: 'fixed',
+          backgroundColor: `hsla(${hues[0]},40%,89%,1)`,
+          backgroundImage:
+          `radial-gradient(at 41% 50%, hsla(${
+            hues[1]
+          },100%,77%,1) 0px, transparent 50%),
+          radial-gradient(at 29% 33%, hsla(${
+          hues[2] + 220
+          },100%,80%,1) 0px, transparent 50%),
+          radial-gradient(at 32% 74%, hsla(${
+          hues[3] + 220
+          },100%,80%,1) 0px, transparent 50%),
+          radial-gradient(at 77% 40%, hsla(${
+          hues[4] + 220
+          },100%,80%,1) 0px, transparent 50%),
+          radial-gradient(at 65% 69%, hsla(${
+          hues[5] + 220
+          },100%,80%,1) 0px, transparent 50%),
+          radial-gradient(at 50% 25%, hsla(${
+          hues[6] + 220
+          },100%,80%,1) 0px, transparent 50%),
+          radial-gradient(at 90% 72%, hsla(${
+          hues[7] + 220
+          },100%,80%,1) 0px, transparent 50%),
+          radial-gradient(at 20% 90%, hsla(${
+          hues[8] + 220
+          },100%,80%,1) 0px, transparent 50%)`
         }}
       />
       <div
@@ -116,3 +128,4 @@ function Bg({ modeToggle }) {
 }
 
 export default Bg
+
