@@ -68,7 +68,7 @@ function ComingOfAge({ modeToggle, pColor, handleNavigation }) {
       </div>
       <div>
         <div className="flex flex-col font-higuen text-6xl mt-40 mb-40 justify-center items-center leading-snug">
-          <div onClick={() => handleNavigation('/')} className="flex">
+          <div onClick={() => handleNavigation('/')} className="flex cursor-pointer">
             {modeToggle ? (
               <SideArrow2 className="h-10 mt-4 mr-2" />
             ) : (

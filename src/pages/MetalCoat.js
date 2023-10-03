@@ -89,7 +89,7 @@ function MetalCoat({ modeToggle, pColor, handleNavigation }) {
           <a href="metalcoat.xyz/">Visit the site</a>
         </h2>
         <div className="flex flex-col font-higuen text-6xl mt-40 mb-40 justify-center items-center leading-snug">
-          <div onClick={() => handleNavigation('/')} className="flex">
+          <div onClick={() => handleNavigation('/')} className="flex cursor-pointer">
             {modeToggle ? (
               <SideArrow2 className="h-10 mt-4 mr-2" />
             ) : (
@@ -97,7 +97,7 @@ function MetalCoat({ modeToggle, pColor, handleNavigation }) {
             )}
             <h2>Home&emsp;</h2>
           </div>
-          <div onClick={() => handleNavigation('/crisol')} className="flex">
+          <div onClick={() => handleNavigation('/crisol')} className="flex cursor-pointer">
             <h2>&emsp;Next</h2>
             {modeToggle ? (
               <SideArrow2 className="h-10 mt-4 ml-2 rotate-180" />
