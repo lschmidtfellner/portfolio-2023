@@ -53,7 +53,7 @@ function Newor({ modeToggle, pColor, handleNavigation }) {
         />
       </div>
       <p className="font-aktiv mt-20 text-xs sm:text-sm lg:text-lg w-[80%]">
-        In order to introduce a unique to the series, I used a combination of sumi ink brush strokes and vector graphics, predominantly with the help of the Adobe Creative Suite. This ended up being more than 30 illustrations in total.
+        In order to introduce a unique feel to the series, I used a combination of sumi ink brush strokes and vector graphics, predominantly with the help of the Adobe Creative Suite. This ended up being more than 30 illustrations in total.
       </p>
       <div className="flex justify-center mt-20">
         <img
