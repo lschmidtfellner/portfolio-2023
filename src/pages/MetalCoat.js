@@ -86,7 +86,7 @@ function MetalCoat({ modeToggle, pColor, handleNavigation }) {
           }}
           className="font-higuen text-3xl pb-2 mt-16 border-b-1 cursor-pointer "
         >
-          <a href="metalcoat.xyz/">Visit the site</a>
+          <a href="https://metalcoat.xyz/">Visit the site</a>
         </h2>
         <div className="flex flex-col font-higuen text-6xl mt-40 mb-40 justify-center items-center leading-snug">
           <div onClick={() => handleNavigation('/')} className="flex cursor-pointer">
