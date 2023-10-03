@@ -98,7 +98,7 @@ function Landing({ pColor, handleNavigation }) {
             <h2>& UI Engineer</h2>
           </div>
           <div className="flex mt-12 justify-between">
-            <p className="text-xs font-aktiv w-40 ">
+            <p className="text-xs text-left font-aktiv w-40 ">
               I’m a Brooklyn-based designer, software engineer, artist, and
               musician who recently graduated from General Assembly’s fullstack
               software engineering fellowship.

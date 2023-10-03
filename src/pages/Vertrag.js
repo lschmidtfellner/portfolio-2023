@@ -1,15 +1,31 @@
-import React from 'react'
+import React, {useEffect, useRef}from 'react'
 import { useNavigate } from 'react-router-dom'
 import {ReactComponent as SideArrow} from '../assets/sitesidearrow.svg'
-
+import { gsap } from 'gsap'
 import vertrag1 from '../assets/vertrag/Portfolio+Wireframe.jpeg'
 import vertrag2 from '../assets/vertrag/Portfolio+Wireframe2.jpeg'
 import vertrag3 from '../assets/vertrag/vertrag+mockup.jpeg'
 
 function Vertrag({ pColor, handleNavigation }) {
   const navigate = useNavigate()
+  const childrenRef = useRef(null)
+
+  useEffect(() => {
+    const elements = childrenRef.current.children
+    gsap.set(elements, { y: 30, autoAlpha: 0 }) // set initial position
+
+    gsap.to(elements, {
+      y: 0,
+      autoAlpha: 1,
+      stagger: 0.4, // delay between each child animation
+      duration: 1, // animation duration
+      ease: 'easeInOut', // easing function
+      overwrite: 'auto'
+    })
+  }, [])
+
   return (
-    <div style={{ color: pColor }} className="mx-6 mt-20 w-auto ">
+    <div ref={childrenRef} style={{ color: pColor }} className="mx-6 mt-20 w-auto ">
       <h2 className="text-5xl font-higuen">Vertrag</h2>
       <h3 className="text-lg font-aktiv font-bold mt-12">
         Design, Packaging

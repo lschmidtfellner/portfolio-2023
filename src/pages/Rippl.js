@@ -1,45 +1,62 @@
-import React from 'react'
+import React, {useEffect, useRef} from 'react'
 import { useNavigate } from 'react-router-dom'
 import rippl0 from '../assets/rippl/rippl0.png'
 import rippl2 from '../assets/rippl/rippl2.png'
 import rippl3 from '../assets/rippl/rippl3.png'
 import {ReactComponent as SideArrow} from '../assets/sitesidearrow.svg'
+import { gsap } from 'gsap'
 
 function Rippl({ pColor, handleNavigation }) {
   const navigate = useNavigate()
+  const childrenRef = useRef(null)
+
+  useEffect(() => {
+    const elements = childrenRef.current.children
+    gsap.set(elements, { y: 20, autoAlpha: 0 }) // set initial position
+
+    gsap.to(elements, {
+      y: 0,
+      autoAlpha: 1,
+      stagger: 0.4, // delay between each child animation
+      duration: 1, // animation duration
+      ease: 'easeInOut', // easing function
+      overwrite: 'auto'
+    })
+  }, [])
+
   return (
-    <div style={{ color: pColor }} className="mx-6 mt-20 w-auto ">
-      <h2 className="text-5xl font-higuen">Rippl</h2>
-      <h3 className="text-lg font-aktiv font-bold mt-12">
+    <div ref={childrenRef} style={{ color: pColor }} className="mx-6 mt-20 w-auto ">
+      <h2 style={{opacity: 0}} className="text-5xl font-higuen">Rippl</h2>
+      <h3 style={{opacity: 0}} className="text-lg font-aktiv font-bold mt-12">
         Design, Web Development
       </h3>
-      <p className="font-aktiv mt-6 text-xs w-72">
+      <p style={{opacity: 0}} className="font-aktiv mt-6 text-xs w-72">
         Rippl is a fullstack MERN app I developed in an effort to utilize
         Spotify's proprietary 'popularity quotient' against itself. By limiting
         the maximum popularity and providing a track or two, I discovered that I
         could find lesser-known hits within a given genre.
       </p>
-      <div className="flex justify-center mt-12">
+      <div style={{opacity: 0}} className="flex justify-center mt-12">
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
           src={rippl0}
         />
       </div>
-      <p className="font-aktiv mt-12 text-xs w-72">
+      <p style={{opacity: 0}} className="font-aktiv mt-12 text-xs w-72">
         For the visual identity, I wanted to play around with 3-dimensional
         assets that ideated on ripples or waves. I also wanted to keep it
         somewhat compatible with Spotify's visual identity, but with some extra
         whimsy and flair.
       </p>
-      <div className="flex justify-center mt-12">
+      <div style={{opacity: 0}} className="flex justify-center mt-12">
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
           src={rippl2}
         />
       </div>
-      <div className="flex justify-center mt-12">
+      <div style={{opacity: 0}} className="flex justify-center mt-12">
         <img
           style={{ borderColor: pColor }}
           className="border-[1px] w-fit h-auto"
@@ -48,7 +65,8 @@ function Rippl({ pColor, handleNavigation }) {
       </div>
       <h2
         style={{
-          borderBottom: `1px solid ${pColor}`
+          borderBottom: `1px solid ${pColor}`,
+          opacity: 0
         }}
         className="font-higuen text-3xl pb-2 mt-16 border-b-1 cursor-pointer "
       >
@@ -56,7 +74,8 @@ function Rippl({ pColor, handleNavigation }) {
       </h2>
       <h2
         style={{
-          borderBottom: `1px solid ${pColor}`
+          borderBottom: `1px solid ${pColor}`,
+          opacity: 0
         }}
         className="font-higuen text-3xl pb-2 mt-6 border-b-1 cursor-pointer "
       >
