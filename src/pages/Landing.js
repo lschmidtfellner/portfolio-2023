@@ -98,52 +98,35 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
           </div>
           <div
             style={{ opacity: 0 }}
-            className="flex justify-around text-right lg:text-left font-aktiv w-full pt-8 lg:pt-4 z-4 text-lg sm:text-2xl"
+            className="flex text-left justify-between font-aktiv pt-8 lg:pt-4 z-4 text-lg sm:text-2xl"
           >
-            <div>
-              <div className="flex flex-col font-bold">
-                <h2>Graphic Designer</h2>
-                <h2>& UI Engineer</h2>
-              </div>
-              <p className="hidden lg:block pt-8 text-sm text-left font-aktiv w-72 ">
-                I’m a Brooklyn-based designer, software engineer, artist, and
-                musician who recently graduated from General Assembly’s
-                fullstack software engineering fellowship.
-              </p>
-            </div>
-            <div className="hidden lg:flex flex-col mr-6 items-center justify-center">
-              {modeToggle ? (
-                <SiteScroll2 className="w-20 sm:w-24 animate-slowspin site-scroll" />
-              ) : (
-                <SiteScroll className="w-20 sm:w-24 animate-slowspin site-scroll" />
-              )}
-              <div>
-                {modeToggle ? (
-                  <SiteDownArrow2 className="animate-updown w-8 sm:w-10 mt-4" />
-                ) : (
-                  <SiteDownArrow className="animate-updown w-8 sm:w-10 mt-4" />
-                )}
-              </div>
-            </div>
-          </div>
-          <div style={{ opacity: 0 }} className="flex mt-12 justify-between">
-            <p className="lg:hidden text-xs sm:text-sm text-left font-aktiv w-40 sm:w-72 ">
-              I’m a Brooklyn-based designer, software engineer, artist, and
-              musician who recently graduated from General Assembly’s fullstack
-              software engineering fellowship.
-            </p>
-            <div className="flex lg:hidden flex-col mr-6 items-center justify-center">
-              {modeToggle ? (
-                <SiteScroll2 className="w-20 sm:w-24 animate-slowspin site-scroll" />
-              ) : (
-                <SiteScroll className="w-20 sm:w-24 animate-slowspin site-scroll" />
-              )}
-              <div>
-              {modeToggle ? (
-                <SiteDownArrow2 className="animate-updown w-8 sm:w-10 mt-4" />
-              ) : (
-                <SiteDownArrow className="animate-updown w-8 sm:w-10 mt-4" />
-              )}
+            <div className='w-full'>
+              <div className="flex justify-between md:justify-around">
+                <div className="flex flex-col">
+                  <div className="flex flex-col font-bold">
+                    <h2>Graphic Designer</h2>
+                    <h2>& UI Engineer</h2>
+                  </div>
+                  <p className="pt-8 text-xs sm:text-sm text-left font-aktiv w-40 sm:w-72 ">
+                    I’m a Brooklyn-based designer, software engineer, artist,
+                    and musician who recently graduated from General Assembly’s
+                    fullstack software engineering fellowship.
+                  </p>
+                </div>
+                <div className="flex flex-col mr-6 items-center justify-center">
+                  {modeToggle ? (
+                    <SiteScroll2 className="w-20 sm:w-24 animate-slowspin site-scroll" />
+                  ) : (
+                    <SiteScroll className="w-20 sm:w-24 animate-slowspin site-scroll" />
+                  )}
+                  <div>
+                    {modeToggle ? (
+                      <SiteDownArrow2 className="animate-updown w-8 sm:w-10 mt-4" />
+                    ) : (
+                      <SiteDownArrow className="animate-updown w-8 sm:w-10 mt-4" />
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
