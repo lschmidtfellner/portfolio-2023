@@ -61,7 +61,7 @@ function App() {
         <Route path="/metalcoat" element={<MetalCoat modeToggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}></Route>
         <Route path="/revradar" element={<RevRadar modeToggle={modeToggle} pColor={pColor} handleNavigation={handleNavigation}/>}></Route>
       </Routes>
-      <BreakpointIndicator/>
+      {/* <BreakpointIndicator/> */}
     </div>
   )
 }
