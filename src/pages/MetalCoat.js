@@ -41,7 +41,8 @@ function MetalCoat({ modeToggle, pColor, handleNavigation }) {
     >
       <h2 className="text-5xl sm:text-8xl font-higuen">Metal Coat</h2>
       <h3 className="text-lg sm:text-2xl font-aktiv font-bold mt-12">
-        Design, Identity
+        Apparel Design, <br/> 
+        Ecommerce and Web Design
       </h3>
       <p className="font-aktiv text-xs sm:text-sm lg:text-lg w-[80%] mt-6">
         I began making apparel in the esports community in 2018 with the mission

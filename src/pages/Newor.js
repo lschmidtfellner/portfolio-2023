@@ -33,7 +33,7 @@ function Newor({ modeToggle, pColor, handleNavigation }) {
     <div ref={childrenRef} style={{ color: pColor }} className="flex flex-col mx-6 mt-20 pt-16 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80">
       <h2 className="text-5xl sm:text-8xl font-higuen">Newor Media</h2>
       <h3 className="text-lg sm:text-2xl font-aktiv font-bold mt-12">
-        Illustration, Design
+        Design & Illustration
       </h3>
       <p className="font-aktiv mt-6 text-xs sm:text-sm lg:text-lg w-[80%]">
       I was contracted by Newor Media to create a series of illustrations for their blog. They found that the illustrations available from typical sources were too sterile, and the task was to create something simple and vibrant that would stand out by comparison.

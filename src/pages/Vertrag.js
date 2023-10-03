@@ -29,7 +29,7 @@ function Vertrag({ modeToggle, pColor, handleNavigation }) {
     <div ref={childrenRef} style={{ color: pColor }} className="flex flex-col mx-6 mt-20 pt-16 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80">
       <h2 className="text-5xl sm:text-8xl font-higuen">Vertrag</h2>
       <h3 className="text-lg sm:text-2xl font-aktiv font-bold mt-12">
-        Design, Packaging
+        Visual Identity <br/>& Package Design
       </h3>
       <div className="flex justify-center mt-20">
         <img

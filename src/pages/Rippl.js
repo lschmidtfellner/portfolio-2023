@@ -29,7 +29,7 @@ function Rippl({ modeToggle, pColor, handleNavigation }) {
     <div ref={childrenRef} style={{ color: pColor }} className="flex flex-col mx-6 mt-20 pt-16 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80 ">
       <h2 style={{opacity: 0}} className="text-5xl sm:text-8xl font-higuen">Rippl</h2>
       <h3 style={{opacity: 0}} className="text-lg sm:text-2xl font-aktiv font-bold mt-12">
-        Design, Web Development
+        Software Engineering <br/> & Visual Identity
       </h3>
       <p style={{opacity: 0}} className="font-aktiv mt-6 text-xs sm:text-sm lg:text-lg w-[80%]">
         Rippl is a fullstack MERN app I developed in an effort to utilize

@@ -13,8 +13,6 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
   const landingRef = useRef(null)
   const headerRef = useRef(null)
   const workRef = useRef(null)
-  const arrowRef = useRef(null)
-  const arrowRef2 = useRef(null)
 
   useEffect(() => {
     const elements = headerRef.current.children
@@ -72,16 +70,6 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
     }
   }, [])
 
-  useEffect(() => {
-    gsap.to(arrowRef.current, {
-      y: '10%', // Moves the arrow by 10% of its height
-      duration: 1, // Animation duration is 1 second
-      yoyo: true, // Makes the animation alternate back and forth
-      repeat: -1, // Repeats the animation indefinitely
-      ease: 'power1.inOut' // Easing function for smooth animation
-    })
-  }, [])
-
   return (
     <div
       style={{ color: pColor }}
@@ -129,7 +117,7 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
               ) : (
                 <SiteScroll className="w-20 sm:w-24 animate-slowspin site-scroll" />
               )}
-              <div ref={arrowRef2}>
+              <div>
                 {modeToggle ? (
                   <SiteDownArrow2 className="animate-updown w-8 sm:w-10 mt-4" />
                 ) : (
@@ -150,7 +138,7 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
               ) : (
                 <SiteScroll className="w-20 sm:w-24 animate-slowspin site-scroll" />
               )}
-              <div ref={arrowRef}>
+              <div>
               {modeToggle ? (
                 <SiteDownArrow2 className="animate-updown w-8 sm:w-10 mt-4" />
               ) : (
