@@ -1,40 +1,47 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ReactComponent as SiteLogo } from '../assets/sitelogo.svg';
-import { ReactComponent as Hamburger } from '../assets/siteburger.svg'
-import { ReactComponent as CloseX } from '../assets/sitex.svg'
+import { ReactComponent as SiteLogo2 } from '../assets/sitelogo2.svg';
+import DarkSwitch from './DarkSwitch';
 
-function Nav({ isMenuOpen, setIsMenuOpen, pColor, handleNavigation }) {
+function Nav({
+  modeToggle,
+  setModeToggle,
+  isMenuOpen,
+  setIsMenuOpen,
+  pColor,
+  handleNavigation
+}) {
   const navigate = useNavigate();
-
-  function menuToggle() {
-    setIsMenuOpen((prev) => !prev);
-  }
-
-  useEffect(() => {
-    if (isMenuOpen) {
-      // Do something if the menu is open
-    } else {
-      // Do something else if the menu is closed
-    }
-  }, [isMenuOpen]);
 
   return (
     <div>
-      <div className="flex nav-div z-0 h-10 top-0 left-0 right-0 mx-6 pt-8 pb-10 justify-between" style={{
-      borderBottom: `1px solid ${pColor}`
-      }}>
-        <SiteLogo 
-          onClick={() => {
-            handleNavigation('/');
-            if (isMenuOpen === true) {
-              menuToggle();
-            }
-          }}
-          className="h-4 cursor-pointer"
-          fill={pColor} 
+      <div
+        className="flex nav-div z-0 h-10 top-0 left-0 right-0 mx-6 sm:mx-20 pt-8 pb-10 justify-between"
+        style={{
+          borderBottom: `1px solid ${pColor}`
+        }}
+      >
+        {modeToggle ? (
+          <SiteLogo2 
+            onClick={() => {
+              handleNavigation('/');
+            }}
+            className="site-logo h-4 cursor-pointer"
+          />
+        ) : (
+          <SiteLogo 
+            onClick={() => {
+              handleNavigation('/');
+            }}
+            className="site-logo h-4 cursor-pointer"
+          />
+        )}
+        <DarkSwitch
+          modeToggle={modeToggle}
+          setModeToggle={setModeToggle}
+          pColor={pColor}
         />
-      {isMenuOpen ? <CloseX className='h-5' onClick={() => {menuToggle()}}/> : <Hamburger className='h-4' onClick={() => {menuToggle()}}/>}
       </div>
     </div>
   );

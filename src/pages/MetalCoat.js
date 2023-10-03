@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {ReactComponent as SideArrow} from '../assets/sitesidearrow.svg'
+import {ReactComponent as SideArrow2} from '../assets/sitesidearrow2.svg'
 import MCCarousel from '../components/MCCarousel'
 import MCCouple from '../components/MCCouple'
 import { gsap } from 'gsap'
@@ -15,7 +16,7 @@ import op1 from '../assets/metalcoat/dev1.jpg'
 import op2 from '../assets/metalcoat/dev2.jpg'
 
 
-function MetalCoat({ pColor, handleNavigation }) {
+function MetalCoat({ modeToggle, pColor, handleNavigation }) {
   const navigate = useNavigate()
   const childrenRef = useRef(null)
 
@@ -61,12 +62,12 @@ function MetalCoat({ pColor, handleNavigation }) {
       </h2>
         <div className='flex flex-col font-higuen text-6xl mt-40 mb-40 justify-center items-center leading-snug'>
           <div onClick={() => handleNavigation('/')} className='flex'>
-            <SideArrow className='h-10 mt-4 mr-2'/>
+          {modeToggle ? <SideArrow2 className='h-10 mt-4 mr-2'/> : <SideArrow className='h-10 mt-4 mr-2'/>}
           <h2>Home&emsp;</h2>
           </div>
           <div onClick={() => handleNavigation('/crisol')} className='flex'>
           <h2>&emsp;Next</h2>
-          <SideArrow className='h-10 mt-4 ml-2 rotate-180'/>
+          {modeToggle ? <SideArrow2 className='h-10 mt-4 ml-2 rotate-180'/> : <SideArrow className='h-10 mt-4 ml-2 rotate-180'/>}
           </div>
         </div>
       </div>

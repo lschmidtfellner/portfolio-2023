@@ -1,13 +1,14 @@
 import React, { useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {ReactComponent as SideArrow} from '../assets/sitesidearrow.svg'
+import {ReactComponent as SideArrow2} from '../assets/sitesidearrow2.svg'
 import { gsap } from 'gsap'
 import coa1 from '../assets/comingofage/bfi+spread+1+site.jpeg'
 import coa2 from '../assets/comingofage/bfi+spread+2+site.jpeg'
 import coa3 from '../assets/comingofage/Ticket+Set+MoVV.jpeg'
 
 
-function ComingOfAge({ pColor, handleNavigation }) {
+function ComingOfAge({ modeToggle, pColor, handleNavigation }) {
   const navigate = useNavigate()
   const childrenRef = useRef(null)
 
@@ -58,7 +59,7 @@ function ComingOfAge({ pColor, handleNavigation }) {
       <div>
         <div className='flex flex-col font-higuen text-6xl mt-40 mb-40 justify-center items-center leading-snug'>
           <div onClick={() => handleNavigation('/')} className='flex'>
-            <SideArrow className='h-10 mt-4 mr-2'/>
+            {modeToggle ? <SideArrow2 className='h-10 mt-4 mr-2'/> : <SideArrow className='h-10 mt-4 mr-2'/>}
           <h2>Home&emsp;</h2>
           </div>
         </div>

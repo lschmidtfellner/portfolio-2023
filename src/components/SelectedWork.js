@@ -1,10 +1,11 @@
 import React, { useRef, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ReactComponent as SiteHyphen } from '../assets/sitehyphenlg.svg'
+import { ReactComponent as SiteHyphen2 } from '../assets/sitehyphenlg2.svg'
 import { gsap } from 'gsap'
 import userEvent from '@testing-library/user-event'
 
-function SelectedWork({ pColor, handleNavigation }) {
+function SelectedWork({ modeToggle, pColor, handleNavigation }) {
     const workRef = useRef(null);
     const [isInView, setIsInView] = useState(false);
     const hasAnimated = useRef(false); // Ref to track if animation has been played
@@ -52,18 +53,18 @@ function SelectedWork({ pColor, handleNavigation }) {
 
   return (
     <div className="mt-40">
-      <div className="flex">
-        <h2 className="font-aktiv font-bold text-lg">Selected Work</h2>
-        <SiteHyphen style={{ borderColor: pColor }} className="ml-3 mt-3 h-2" />
+      <div className="flex justify-between">
+        <h2 className="font-aktiv font-bold text-lg sm:text-2xl">Selected Work</h2>
+        {modeToggle ? <SiteHyphen2 className="ml-3 mt-3 h-2 sm:h-3" /> : <SiteHyphen className="ml-3 mt-3 h-2 sm:h-3" />}
       </div>
-      <ul ref={workRef}>
+      <ul className='font-higuen text-3xl sm:text-5xl' ref={workRef}>
         <li
           onClick={() => handleNavigation('/revradar')}
           style={{
             borderBottom: `1px solid ${pColor}`,
             opacity: 0
           }}
-          className="font-higuen text-3xl pb-2 mt-16 border-b-1 cursor-pointer "
+          className=" pb-2 mt-16 border-b-1 cursor-pointer "
         >
           RevRadar
         </li>
@@ -73,7 +74,7 @@ function SelectedWork({ pColor, handleNavigation }) {
             borderBottom: `1px solid ${pColor}`,
             opacity: 0
           }}
-          className="font-higuen text-3xl pb-2 mt-6 border-b-1 cursor-pointer "
+          className=" pb-2 mt-6 border-b-1 cursor-pointer "
         >
           Rippl
         </li>
@@ -83,7 +84,7 @@ function SelectedWork({ pColor, handleNavigation }) {
             borderBottom: `1px solid ${pColor}`,
             opacity: 0
           }}
-          className="font-higuen text-3xl pb-2 mt-6 border-b-1 cursor-pointer "
+          className="pb-2 mt-6 border-b-1 cursor-pointer "
         >
           Newor Media
         </li>
@@ -93,7 +94,7 @@ function SelectedWork({ pColor, handleNavigation }) {
             borderBottom: `1px solid ${pColor}`,
             opacity: 0
           }}
-          className="font-higuen text-3xl pb-2 mt-6 border-b-1 cursor-pointer "
+          className="pb-2 mt-6 border-b-1 cursor-pointer "
         >
           Metal Coat
         </li>
@@ -103,7 +104,7 @@ function SelectedWork({ pColor, handleNavigation }) {
             borderBottom: `1px solid ${pColor}`,
             opacity: 0
           }}
-          className="font-higuen text-3xl pb-2 mt-6 border-b-1 cursor-pointer "
+          className="pb-2 mt-6 border-b-1 cursor-pointer "
         >
           Crisol
         </li>
@@ -113,7 +114,7 @@ function SelectedWork({ pColor, handleNavigation }) {
             borderBottom: `1px solid ${pColor}`,
             opacity: 0
           }}
-          className="font-higuen text-3xl pb-2 mt-6 border-b-1 cursor-pointer "
+          className="pb-2 mt-6 border-b-1 cursor-pointer "
         >
           Vertrag
         </li>
@@ -123,7 +124,7 @@ function SelectedWork({ pColor, handleNavigation }) {
             borderBottom: `1px solid ${pColor}`,
             opacity: 0
           }}
-          className="font-higuen text-3xl pb-2 mt-6 border-b-1 "
+          className="pb-2 mt-6 border-b-1 "
         >
           Coming of Age
         </li>

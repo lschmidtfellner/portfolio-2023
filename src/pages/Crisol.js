@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {ReactComponent as SideArrow} from '../assets/sitesidearrow.svg'
+import {ReactComponent as SideArrow2} from '../assets/sitesidearrow2.svg'
 import { gsap } from 'gsap'
 import crisol1 from '../assets/crisol/8.jpeg'
 import crisol2 from '../assets/crisol/Event_Wristband_Mockup_2.jpeg'
@@ -8,7 +9,7 @@ import crisol3 from '../assets/crisol/Flag+Mockup.jpeg'
 import crisol4 from '../assets/crisol/iPhone+X+2018+Mockup.jpeg'
 
 
-function Crisol({ pColor, handleNavigation }) {
+function Crisol({ modeToggle, pColor, handleNavigation }) {
   const navigate = useNavigate()
   const childrenRef = useRef(null)
 
@@ -66,12 +67,12 @@ function Crisol({ pColor, handleNavigation }) {
       <div>
         <div className='flex flex-col font-higuen text-6xl mt-40 mb-40 justify-center items-center leading-snug'>
           <div onClick={() => handleNavigation('/')} className='flex'>
-            <SideArrow className='h-10 mt-4 mr-2'/>
+          {modeToggle ? <SideArrow2 className='h-10 mt-4 mr-2'/> : <SideArrow className='h-10 mt-4 mr-2'/>}
           <h2>Home&emsp;</h2>
           </div>
           <div onClick={() => handleNavigation('/vertrag')} className='flex'>
           <h2>&emsp;Next</h2>
-          <SideArrow className='h-10 mt-4 ml-2 rotate-180'/>
+          {modeToggle ? <SideArrow2 className='h-10 mt-4 ml-2 rotate-180'/> : <SideArrow className='h-10 mt-4 ml-2 rotate-180'/>}
           </div>
         </div>
       </div>

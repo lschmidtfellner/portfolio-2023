@@ -1,6 +1,7 @@
 import React, {useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {ReactComponent as SideArrow} from '../assets/sitesidearrow.svg'
+import {ReactComponent as SideArrow2} from '../assets/sitesidearrow2.svg'
 import { gsap } from 'gsap'
 
 import newor4 from '../assets/newor/newor4.png'
@@ -10,7 +11,7 @@ import newor9 from '../assets/newor/newor9.png'
 import newor10 from '../assets/newor/newor10.png'
 
 
-function Newor({ pColor, handleNavigation }) {
+function Newor({ modeToggle, pColor, handleNavigation }) {
   const navigate = useNavigate()
   const childrenRef = useRef(null)
 
@@ -78,12 +79,12 @@ function Newor({ pColor, handleNavigation }) {
       <div>
         <div className='flex flex-col font-higuen text-6xl mt-40 mb-40 justify-center items-center leading-snug'>
           <div onClick={() => handleNavigation('/')} className='flex'>
-            <SideArrow className='h-10 mt-4 mr-2'/>
+          {modeToggle ? <SideArrow2 className='h-10 mt-4 mr-2'/> : <SideArrow className='h-10 mt-4 mr-2'/>}
           <h2>Home&emsp;</h2>
           </div>
           <div onClick={() => handleNavigation('/metalcoat')} className='flex'>
           <h2>&emsp;Next</h2>
-          <SideArrow className='h-10 mt-4 ml-2 rotate-180'/>
+          {modeToggle ? <SideArrow2 className='h-10 mt-4 ml-2 rotate-180'/> : <SideArrow className='h-10 mt-4 ml-2 rotate-180'/>}
           </div>
         </div>
       </div>
