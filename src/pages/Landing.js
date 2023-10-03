@@ -78,7 +78,7 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
       <div>
         <div
           ref={headerRef}
-          className="text-6xl sm:text-[85pt] lg:text-[115pt] text-center"
+          className="text-7xl sm:text-[85pt] lg:text-[115pt] text-center"
         >
           <h1 style={{ opacity: 0 }} className="font-higuen">
             Luke
@@ -115,9 +115,9 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
                 </div>
                 <div className="flex flex-col mr-6 items-center justify-center">
                   {modeToggle ? (
-                    <SiteScroll2 className="w-20 sm:w-24 animate-slowspin site-scroll" />
+                    <SiteScroll2 className="w-24 animate-slowspin site-scroll" />
                   ) : (
-                    <SiteScroll className="w-20 sm:w-24 animate-slowspin site-scroll" />
+                    <SiteScroll className="w-24 animate-slowspin site-scroll" />
                   )}
                   <div>
                     {modeToggle ? (
