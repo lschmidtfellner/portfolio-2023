@@ -124,7 +124,7 @@ function SelectedWork({ modeToggle, pColor, handleNavigation }) {
             borderBottom: `1px solid ${pColor}`,
             opacity: 0
           }}
-          className="pb-2 mt-6 border-b-1 "
+          className="pb-2 mt-6 border-b-1 cursor-pointer "
         >
           Coming of Age
         </li>
