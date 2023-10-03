@@ -45,6 +45,7 @@ function Bg({ modeToggle }) {
         id="gradientContainer"
         className="h-full w-full"
         style={{
+          opacity: modeToggle ? 1 : 0,
           transition: 'ease-in-out all 0.4s',
           position: 'fixed',
           backgroundColor: `hsla(${hues[0]+220},40%,20%,1)`,
