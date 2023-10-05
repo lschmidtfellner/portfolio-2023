@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# 🌌 LSF Portfolio Site 2023 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Description:**  
+A React application showcasing my work as a software engineer and designer, with a personal brand I created from scratch.
 
-## Available Scripts
+## 🌟 Features:
+- 🌠 Seamless animations between pages.
+- 🎨 Custom rendered multi-point radial gradient background.
+- 🌈 Color scheme toggle.
 
-In the project directory, you can run:
+## 🔧 Installation:
 
-### `npm start`
+1. **Clone the repository:**
+    ```bash
+    git clone [your-repo-link]
+    ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **Navigate to the project directory:**
+    ```bash
+    cd [your-repo-name]
+    ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. **Install the required dependencies:**
+    ```bash
+    npm install
+    ```
 
-### `npm test`
+4. **Install and setup TailwindCSS** following the [official TailwindCSS documentation](https://tailwindcss.com/docs/installation).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📦 Dependencies:
 
-### `npm run build`
+This app relies on various dependencies to enhance its functionality and presentation:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `gsap` for smooth animations.
+- `tailwindcss` for utility-first CSS management.
+- `react-router-dom` for front-end routing.
+... and more, which can be found in the `package.json` (though I need to clean a couple of unused ones out). 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🤝 Contribution:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Want to contribute to the LSF Portfolio Site 2023? Awesome! Fork the repository, make your changes, and then submit a pull request. Feedback and improvements are always welcome.
 
-### `npm run eject`
+## 📜 License:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This project is currently not under any specific license. Please use responsibly and always give credit where it's due.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
