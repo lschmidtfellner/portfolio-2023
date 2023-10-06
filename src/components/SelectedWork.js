@@ -66,7 +66,7 @@ function SelectedWork({ modeToggle, pColor, handleNavigation }) {
           }}
           className=" pb-2 mt-16 border-b-1 cursor-pointer "
         >
-          RevRadar WIP
+          RevRadar (WIP)
         </li>
         <li
           onClick={() => handleNavigation('/rippl')}
