@@ -78,7 +78,7 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
       <div>
         <div
           ref={headerRef}
-          className="text-7xl sm:text-[85pt] lg:text-[115pt] text-center"
+          className="text-7xl sm:text-[10vh] lg:text-[17vh] text-center"
         >
           <h1 style={{ opacity: 0 }} className="font-higuen">
             Luke
@@ -92,11 +92,11 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
             ) : (
               <SiteHyphenLg className="w-14 sm:w-32 lg:w-40 mb-2 mr-4" />
             )}
-            <div ref={landingRef}>
+            <div>
               <h1 className=" font-higuen">Fellner</h1>
             </div>
           </div>
-          <div
+          <div ref={landingRef}
             style={{ opacity: 0 }}
             className="flex text-left justify-between font-aktiv pt-8 lg:pt-4 z-4 text-lg sm:text-2xl"
           >
@@ -121,9 +121,9 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
                   )}
                   <div>
                     {modeToggle ? (
-                      <SiteDownArrow2 className="animate-updown w-8 sm:w-10 mt-4" />
+                      <SiteDownArrow2 className="animate-updown w-8 sm:w-9 mt-4" />
                     ) : (
-                      <SiteDownArrow className="animate-updown w-8 sm:w-10 mt-4" />
+                      <SiteDownArrow className="animate-updown w-8 sm:w-9 mt-4" />
                     )}
                   </div>
                 </div>
