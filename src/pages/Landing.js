@@ -73,7 +73,7 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
   return (
     <div
       style={{ color: pColor }}
-      className="mx-6 pt-16 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80"
+      className="mx-6 pt-10 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80"
     >
       <div>
         <div
@@ -115,15 +115,15 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
                 </div>
                 <div className="flex flex-col mr-6 items-center justify-center">
                   {modeToggle ? (
-                    <SiteScroll2 className="w-24 animate-slowspin site-scroll" />
+                    <SiteScroll2 className="w-24 2xl:w-28 animate-slowspin site-scroll" />
                   ) : (
-                    <SiteScroll className="w-24 animate-slowspin site-scroll" />
+                    <SiteScroll className="w-24 2xl:w-28 animate-slowspin site-scroll" />
                   )}
                   <div>
                     {modeToggle ? (
-                      <SiteDownArrow2 className="animate-updown w-8 sm:w-9 mt-4" />
+                      <SiteDownArrow2 className="animate-updown w-8 sm:w-9 2xl:w-10 mt-4" />
                     ) : (
-                      <SiteDownArrow className="animate-updown w-8 sm:w-9 mt-4" />
+                      <SiteDownArrow className="animate-updown w-8 sm:w-9 2xl:w-10 mt-4" />
                     )}
                   </div>
                 </div>
