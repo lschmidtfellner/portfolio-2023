@@ -108,9 +108,9 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
                     <h2>& UI Engineer</h2>
                   </div>
                   <p className="pt-8 text-xs sm:text-sm text-left font-aktiv w-40 sm:w-72 ">
-                    I’m a Brooklyn-based designer, software engineer, artist,
-                    and musician who recently graduated from General Assembly’s
-                    fullstack software engineering fellowship.
+                    I’m a Brooklyn-based software engineer and interdisciplinary designer specializing in UI design and development.
+                    I've also designed, sourced, and sold over 15,000 garments, and worked with some of the biggest names
+                    in esports and content creation.
                   </p>
                 </div>
                 <div className="flex flex-col mr-6 items-center justify-center">
