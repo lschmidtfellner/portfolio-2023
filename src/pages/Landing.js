@@ -109,8 +109,8 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
                   </div>
                   <p className="pt-8 text-xs sm:text-sm text-left font-aktiv w-40 sm:w-80 ">
                     I’m a Brooklyn-based software engineer and interdisciplinary designer specializing in UI development.
-                    I've also designed, sourced, and sold over 15,000 garments, and worked with some of the biggest names
-                    in esports and content creation.
+                    I've worked with some of the biggest names in esports and content creation, and have also run a successful
+                    independent ecommerce business.
                   </p>
                 </div>
                 <div className="flex flex-col mr-6 items-center justify-center">
