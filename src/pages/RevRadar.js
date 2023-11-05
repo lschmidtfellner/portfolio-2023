@@ -64,7 +64,7 @@ function RevRadar({ modeToggle, pColor, handleNavigation }) {
         }}
         className="font-higuen text-3xl pb-2 mt-20 border-b-1 cursor-pointer "
       >
-        <a href="https://project-3-client.vercel.app/">Visit the site</a>
+        <a href="https://revradar.vercel.app/">Visit the site</a>
       </h2>
       <h2
         style={{
