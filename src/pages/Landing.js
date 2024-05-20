@@ -96,21 +96,24 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
               <h1 className=" font-higuen">Fellner</h1>
             </div>
           </div>
-          <div ref={landingRef}
+          <div
+            ref={landingRef}
             style={{ opacity: 0 }}
             className="flex text-left justify-between font-aktiv pt-8 lg:pt-4 z-4 text-lg sm:text-2xl"
           >
-            <div className='w-full'>
+            <div className="w-full">
               <div className="flex justify-between md:justify-around">
                 <div className="flex flex-col">
                   <div className="flex flex-col font-bold">
-                    <h2>Graphic Designer</h2>
-                    <h2>& UI Engineer</h2>
+                    <h2>Brand Identity</h2>
+                    <h2>& Web Design Expert</h2>
                   </div>
-                  <p className="pt-8 text-xs sm:text-sm text-left font-aktiv w-40 sm:w-80 ">
-                    I’m a Brooklyn-based software engineer and interdisciplinary designer specializing in UI development.
-                    I've worked with some of the biggest names in esports and content creation, and have also run a successful
-                    independent ecommerce business.
+                  <p className="pt-8 text-xs sm:text-sm text-left font-aktiv w-48 sm:w-80 ">
+                    I specialize in building coherent brands and standout web
+                    presences from the ground up for small businesses. I create
+                    strong, cutting-edge designs that are a step ahead of modern
+                    trends, build custom websites and e-commerce platforms, and
+                    help jumpstart social media presences.
                   </p>
                 </div>
                 <div className="flex flex-col mr-6 items-center justify-center">
