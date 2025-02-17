@@ -12,62 +12,44 @@ import { gsap } from 'gsap'
 function Landing({ modeToggle, pColor, handleNavigation }) {
   const landingRef = useRef(null)
   const headerRef = useRef(null)
-  const workRef = useRef(null)
+  const hyphenRef = useRef(null)
 
   useEffect(() => {
-    const elements = headerRef.current.children
-    gsap.set(elements, { y: 20, autoAlpha: 0 }) // set initial position
+    const textElements = headerRef.current.querySelectorAll('.reveal-letter')
+    const hyphenElement = hyphenRef.current
+    const landingElement = landingRef.current
 
-    gsap.to(elements, {
+    // Set initial positions
+    gsap.set(textElements, { y: "30%", opacity: 0 }) // Reduced travel distance
+    gsap.set(hyphenElement, { x: "-60%", opacity: 0 }) // Move hyphen off-screen left
+    gsap.set(landingElement, { opacity: 0, y: 20 }) // Initially hidden
+
+    // Animate text letters with overlapping fade-in
+    gsap.to(textElements, {
+      y: "0%",
+      opacity: 1,
+      duration: 0.8, // Slightly longer fade for smoother effect
+      stagger: 0.08, // Each letter starts mid-way through the previous one
+      ease: 'power2.out' // Softer easing
+    });
+
+    // Animate hyphen (fade in + slide from left)
+    gsap.to(hyphenElement, {
+      x: "0%",
+      opacity: 1,
+      duration: 0.5,
+      ease: 'power2.out',
+      delay: 1.8 // Ensures hyphen animates after "Schmidt"
+    });
+
+    // Animate landing section (fades in after the hyphen)
+    gsap.to(landingElement, {
+      opacity: 1,
       y: 0,
-      autoAlpha: 1,
-      stagger: 0.2, // delay between each child animation
-      duration: 1, // animation duration
-      ease: 'easeInOut', // easing function
-      overwrite: 'auto'
-    })
-  }, [])
-
-  useEffect(() => {
-    const elements = landingRef.current.children
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          // If entry (child) is in view
-          if (entry.isIntersecting) {
-            gsap.to(entry.target, {
-              y: 0,
-              autoAlpha: 1,
-              stagger: 0.8, // delay between each child animation
-              duration: 1, // animation duration
-              ease: 'easeInOut', // easing function
-              overwrite: 'auto'
-            })
-            observer.unobserve(entry.target)
-          }
-        })
-      },
-      {
-        root: null, // using viewport as root
-        rootMargin: '0px',
-        threshold: 0.5 // trigger animation when 50% of the child is visible
-      }
-    )
-
-    // Setting initial state
-    gsap.set(elements, { y: 20, autoAlpha: 0 })
-
-    // Observing each child
-    Array.from(elements).forEach((element) => {
-      observer.observe(element)
-    })
-
-    // Cleanup function to unobserve all elements
-    return () => {
-      Array.from(elements).forEach((element) => {
-        observer.unobserve(element)
-      })
-    }
+      duration: 1,
+      ease: 'power3.out',
+      delay: 2.5 // Delays after hyphen animation
+    });
   }, [])
 
   return (
@@ -78,67 +60,88 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
       <div>
         <div
           ref={headerRef}
-          className="text-7xl sm:text-[10vh] lg:text-[17vh] text-center"
+          className="text-7xl sm:text-[10vh] lg:text-[17vh] text-center overflow-hidden"
         >
-          <h1 style={{ opacity: 0 }} className="font-higuen">
-            Luke
+          {/* Animated Name */}
+          <h1 className="font-higuen">
+            {[..."Luke"].map((letter, i) => (
+              <span key={i} className="reveal-letter inline-block overflow-hidden">
+                <span className="inline-block">{letter}</span>
+              </span>
+            ))}
           </h1>
-          <h1 style={{ opacity: 0 }} className="font-higuen">
-            Schmidt
+          <h1 className="font-higuen -mt-2 sm:-mt-6">
+            {[..."Schmidt"].map((letter, i) => (
+              <span key={i} className="reveal-letter inline-block overflow-hidden">
+                <span className="inline-block">{letter}</span>
+              </span>
+            ))}
           </h1>
-          <div style={{ opacity: 0 }} className="flex justify-center">
-            {modeToggle ? (
-              <SiteHyphenLg2 className="w-14 sm:w-32 lg:w-40 mb-2 mr-4" />
-            ) : (
-              <SiteHyphenLg className="w-14 sm:w-32 lg:w-40 mb-2 mr-4" />
-            )}
-            <div>
-              <h1 className=" font-higuen">Fellner</h1>
+
+          {/* Flex container to center-align the hyphen properly */}
+          <div className="flex justify-center items-center">
+            {/* Animated SVG (Hyphen - fade in from left) */}
+            <div ref={hyphenRef} className="overflow-hidden inline-block pb-6 sm:pb-12 lg:pb-20">
+              {modeToggle ? (
+                <SiteHyphenLg2 className="w-16 sm:w-32 lg:w-40 mb-2 mr-4 lg:mr-8" />
+              ) : (
+                <SiteHyphenLg className="w-16 sm:w-32 lg:w-40 mb-2 mr-4 lg:mr-8" />
+              )}
             </div>
+
+            {/* Animated Last Name */}
+            <h1 className="font-higuen -mt-2 sm:-mt-6">
+              {[..."Fellner"].map((letter, i) => (
+                <span key={i} className="reveal-letter inline-block overflow-hidden">
+                  <span className="inline-block">{letter}</span>
+                </span>
+              ))}
+            </h1>
           </div>
-          <div ref={landingRef}
-            style={{ opacity: 0 }}
-            className="flex text-left justify-between font-aktiv pt-8 lg:pt-4 z-4 text-lg sm:text-2xl"
-          >
-            <div className='w-full'>
-              <div className="flex justify-between md:justify-around">
-                <div className="flex flex-col">
-                  <div className="flex flex-col font-bold">
-                    <h2>Graphic Designer</h2>
-                    <h2>& UI Engineer</h2>
-                  </div>
-                  <p className="pt-8 text-xs sm:text-sm text-left font-aktiv w-40 sm:w-80 ">
-                    I’m a Brooklyn-based software engineer and interdisciplinary designer specializing in UI development.
-                    I've worked with some of the biggest names in esports and content creation, and have also run a successful
-                    independent ecommerce business.
-                  </p>
-                </div>
-                <div className="flex flex-col mr-6 items-center justify-center">
-                  {modeToggle ? (
-                    <SiteScroll2 className="w-24 2xl:w-28 animate-slowspin site-scroll" />
-                  ) : (
-                    <SiteScroll className="w-24 2xl:w-28 animate-slowspin site-scroll" />
-                  )}
-                  <div>
-                    {modeToggle ? (
-                      <SiteDownArrow2 className="animate-updown w-8 sm:w-9 2xl:w-10 mt-4" />
-                    ) : (
-                      <SiteDownArrow className="animate-updown w-8 sm:w-9 2xl:w-10 mt-4" />
-                    )}
-                  </div>
-                </div>
+        </div>
+      </div>
+      <div 
+        ref={landingRef}
+        style={{ opacity: 0 }}
+        className="flex text-left justify-between font-aktiv pt-8 lg:pt-4 z-4 text-lg sm:text-2xl"
+      >
+        <div className='w-full'>
+          <div className="flex justify-between md:justify-around">
+            <div className="flex flex-col">
+              <div className="flex flex-col font-bold">
+                <h2>Graphic Designer</h2>
+                <h2>& UI Engineer</h2>
+              </div>
+              <p className="pt-8 text-xs sm:text-sm text-left font-aktiv w-40 sm:w-80 ">
+                I’m a Brooklyn-based software engineer and interdisciplinary designer specializing in visual identities and user interfaces.
+                I've worked with some of the biggest names in esports and content creation, and have also run a successful
+                independent ecommerce business.
+              </p>
+            </div>
+            <div className="flex flex-col mr-6 items-center justify-center">
+              {modeToggle ? (
+                <SiteScroll2 className="w-24 2xl:w-28 animate-slowspin site-scroll" />
+              ) : (
+                <SiteScroll className="w-24 2xl:w-28 animate-slowspin site-scroll" />
+              )}
+              <div>
+                {modeToggle ? (
+                  <SiteDownArrow2 className="animate-updown w-8 sm:w-9 2xl:w-10 mt-4" />
+                ) : (
+                  <SiteDownArrow className="animate-updown w-8 sm:w-9 2xl:w-10 mt-4" />
+                )}
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <SelectedWork
-        ref={workRef}
         pColor={pColor}
         handleNavigation={handleNavigation}
         modeToggle={modeToggle}
-      ></SelectedWork>
-      <Contact modeToggle={modeToggle} pColor={pColor}></Contact>
+      />
+      <Contact modeToggle={modeToggle} pColor={pColor} />
     </div>
   )
 }
