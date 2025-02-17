@@ -110,7 +110,7 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
             <div className="flex flex-col">
               <div className="flex flex-col font-bold">
                 <h2>Graphic Designer</h2>
-                <h2>& UI Engineer</h2>
+                <h2>& UI Developer</h2>
               </div>
               <p className="pt-8 text-xs sm:text-sm text-left font-aktiv w-52 sm:w-80 ">
                 I’m a Brooklyn-based software engineer and interdisciplinary designer specializing in visual identities and user interfaces. <br />
