@@ -55,7 +55,7 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
   return (
     <div
       style={{ color: pColor }}
-      className="mx-6 pt-10 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80"
+      className="mx-6 pt-10 sm:pt-20 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80"
     >
       <div>
         <div
