@@ -60,7 +60,7 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
       <div>
         <div
           ref={headerRef}
-          className="text-7xl sm:text-[10vh] lg:text-[17vh] text-center overflow-hidden"
+          className="text-7xl sm:text-[5.6rem] lg:text-[7rem] xl:text-[9rem] text-center overflow-hidden"
         >
           {/* Animated Name */}
           <h1 className="font-higuen">
@@ -81,11 +81,11 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
           {/* Flex container to center-align the hyphen properly */}
           <div className="flex justify-center items-center">
             {/* Animated SVG (Hyphen - fade in from left) */}
-            <div ref={hyphenRef} className="overflow-hidden inline-block pb-6 sm:pb-12 lg:pb-20">
+            <div ref={hyphenRef} className="overflow-hidden inline-block pb-6 sm:pb-12 lg:pb-16 xl:pb-20">
               {modeToggle ? (
-                <SiteHyphenLg2 className="w-16 sm:w-32 lg:w-40 mb-2 mr-4 lg:mr-8" />
+                <SiteHyphenLg2 className="w-16 sm:w-[7rem] lg:w-36 mb-2 mr-4 lg:mr-8" />
               ) : (
-                <SiteHyphenLg className="w-16 sm:w-32 lg:w-40 mb-2 mr-4 lg:mr-8" />
+                <SiteHyphenLg className="w-16 sm:w-[7rem] lg:w-36 mb-2 mr-4 lg:mr-8" />
               )}
             </div>
 
@@ -103,7 +103,7 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
       <div 
         ref={landingRef}
         style={{ opacity: 0 }}
-        className="flex text-left justify-between font-aktiv pt-8 lg:pt-4 z-4 text-lg sm:text-2xl"
+        className="flex text-left justify-between font-aktiv pt-8 lg:pt-2 z-4 text-lg sm:text-2xl"
       >
         <div className='w-full'>
           <div className="flex justify-between md:justify-around">
@@ -112,10 +112,9 @@ function Landing({ modeToggle, pColor, handleNavigation }) {
                 <h2>Graphic Designer</h2>
                 <h2>& UI Engineer</h2>
               </div>
-              <p className="pt-8 text-xs sm:text-sm text-left font-aktiv w-40 sm:w-80 ">
-                I’m a Brooklyn-based software engineer and interdisciplinary designer specializing in visual identities and user interfaces.
-                I've worked with some of the biggest names in esports and content creation, and have also run a successful
-                independent ecommerce business.
+              <p className="pt-8 text-xs sm:text-sm text-left font-aktiv w-52 sm:w-80 ">
+                I’m a Brooklyn-based software engineer and interdisciplinary designer specializing in visual identities and user interfaces. <br />
+                I've worked with some of the biggest names in esports and content creation, and have also run a successful independent ecommerce business.
               </p>
             </div>
             <div className="flex flex-col mr-6 items-center justify-center">

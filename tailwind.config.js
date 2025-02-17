@@ -3,6 +3,7 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
+  
       keyframes: {
         slowspin: {
           '0%': { transform: 'rotate(0deg)' },
