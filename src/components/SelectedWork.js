@@ -54,10 +54,10 @@ function SelectedWork({ modeToggle, pColor, handleNavigation }) {
   return (
     <div className="mt-40 lg:mt-64">
       <div className="flex justify-between">
-        <h2 className="font-aktiv font-bold text-lg sm:text-2xl">Selected Work</h2>
+        <h2 className="font-aktiv font-bold text-[18px] sm:text-[24px]">Selected Work</h2>
         {modeToggle ? <SiteHyphen2 className="ml-3 mt-3 h-2 sm:h-3" /> : <SiteHyphen className="ml-3 mt-3 h-2 sm:h-3" />}
       </div>
-      <ul className='font-higuen text-3xl sm:text-5xl' ref={workRef}>
+      <ul className="font-higuen text-[30px] sm:text-[48px]" ref={workRef}>
         <li
           onClick={() => handleNavigation('/revradar')}
           style={{

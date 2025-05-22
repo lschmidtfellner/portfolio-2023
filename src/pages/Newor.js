@@ -30,7 +30,7 @@ function Newor({ modeToggle, pColor, handleNavigation }) {
   }, [])
 
   return (
-    <div ref={childrenRef} style={{ color: pColor }} className="flex flex-col mx-6 mt-20 pt-16 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80">
+    <div ref={childrenRef} style={{ color: pColor }} className="flex flex-col mx-6 mt-20 pt-16 sm:px-20 md:px-32 lg:px-48 xl:px-64 2xl:px-80 2xl:max-w-[1680px]">
       <h2 className="text-5xl sm:text-8xl font-higuen">Newor Media</h2>
       <h3 className="text-lg sm:text-2xl font-aktiv font-bold mt-12">
         Design & Illustration
